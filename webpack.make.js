@@ -146,7 +146,7 @@ module.exports = function makeWebpackConfig (options) {
 
   var scssLoader = {
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('style', 'css', 'sass')
+    loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass')
   }
 
   // Skip loading css in test mode
