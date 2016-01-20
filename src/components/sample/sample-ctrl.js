@@ -8,7 +8,6 @@ export default class SampleController {
 	}
 
 	onUpdate(state) {
-		console.log('state is in onupdate is', state)
 		return {
 			msg: state.sample.msg
 		}

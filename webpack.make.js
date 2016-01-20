@@ -133,36 +133,31 @@ module.exports = function makeWebpackConfig (options) {
   //
   // Reference: https://github.com/postcss/postcss-loader
   // Postprocess your css with PostCSS plugins
-  var cssLoader = {
-    test: /\.css$/,
-    // Reference: https://github.com/webpack/extract-text-webpack-plugin
-    // Extract css files in production builds
-    //
-    // Reference: https://github.com/webpack/style-loader
-    // Use style-loader in development for hot-loading
-    loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
-  };
+  // var cssLoader = {
+  //   test: /\.css$/,
+  //   // Reference: https://github.com/webpack/extract-text-webpack-plugin
+  //   // Extract css files in production builds
+  //   //
+  //   // Reference: https://github.com/webpack/style-loader
+  //   // Use style-loader in development for hot-loading
+  //   loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
+  // };
+
+
+  var scssLoader = {
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract('style', 'css', 'sass')
+  }
 
   // Skip loading css in test mode
   if (TEST) {
     // Reference: https://github.com/webpack/null-loader
-    // Return an empty module
-    cssLoader.loader = 'null'
+    scssLoader.loader = 'null';
   }
 
   // Add cssLoader to the loader list
-  config.module.loaders.push(cssLoader);
-
-  /**
-   * PostCSS
-   * Reference: https://github.com/postcss/autoprefixer-core
-   * Add vendor prefixes to your css
-   */
-  config.postcss = [
-    autoprefixer({
-      browsers: ['last 2 version']
-    })
-  ];
+  // config.module.loaders.push(cssLoader);
+  config.module.loaders.push(scssLoader);
 
   /**
    * Plugins

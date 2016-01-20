@@ -1,9 +1,13 @@
 import { combineReducers } from 'redux';
 
 import sample from './sample-reducer';
+import main from './main-reducer';
+import editor from './editor-reducer';
 
 const reducers = combineReducers({
-	sample
+	main,
+	sample,
+	editor
 });
 
 export default reducers;
