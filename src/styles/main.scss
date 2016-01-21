@@ -1,9 +1,27 @@
-@import 'partials/reset.scss';
-@import 'partials/variables.scss';
-@import 'partials/mixins.scss';
+/* ref http://jordankoschei.com/itcss/ */
 
-@import 'partials/editor.scss';
+/* VENDOR */
+@import 'vendor/reset';
 
-body {
-	background: $background-color;
-}
+/* SETTINGS - variables for later use */
+@import 'partials/settings.variables';
+
+/* TOOLS - mixins / functions */
+@import 'partials/tools.mixins';
+
+/* BASE - raw element styles (no classes or ids) */
+@import 'partials/base.links';
+@import 'partials/base.body';
+
+/* OBJECTS - classes to extend, also includes structural objects like .inner, .container, etc. */
+@import 'partials/objects.colors';
+
+/* COMPONENTS - specific styling for objects */
+@import 'partials/components.page-wrapper';
+@import 'partials/components.nav';
+@import 'partials/components.editor';
+@import 'partials/components.ideas';
+
+/* TRUMPS - styles that override other styles */
+
+

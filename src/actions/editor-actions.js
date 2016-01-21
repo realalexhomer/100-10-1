@@ -7,6 +7,15 @@ export function sayHi(msg) {
 	}
 }
 
+export function submit(text) {
+	return {
+		type: 'EDITOR_SUBMIT',
+		payload: {
+			text: text
+		}
+	}
+}
+
 export default {
-	sayHi
+	sayHi, submit
 }

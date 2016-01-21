@@ -11,7 +11,9 @@ export default angular
 			controllerAs: 'editor',
 			bindToController: true,
 			template: editorTpl,
-			scope: {}
+			scope: {},
+			link: ($scope, $el) => {
+			}
 		};
 	})
 	.name;

@@ -1,14 +1,14 @@
-<div class="editor-main">
-	<div class="toolbar">
-	</div>
+<div class="editor">
+<!-- 	<div class="toolbar">
+		<h2 class="editor-heading">
+		</h2>
+	</div> 
+ -->
+	<form class="textarea-wrapper" ng-submit="editor.onSubmit($event)">
+		<textarea class="textarea" ng-model="editor.text" ng-keypress="editor.onKeypress($event)"></textarea>
+		<input type="submit" class="submit-button">
+	</form>
 
-	<div class="textarea-wrapper">
-		<textarea class="textarea">
-
-		</textarea>
-	</div>
-
-
-	<p>{{editor.msg}}</p>
-	<button ng-click="editor.sayHi('sane')">say hi instead (editor)</button>
+<!-- 	<p>{{editor.msg}}</p>
+	<button ng-click="editor.sayHi('sane')">say hi instead (editor)</button> -->
 </div>

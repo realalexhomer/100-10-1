@@ -1,13 +1,15 @@
 import { combineReducers } from 'redux';
 
 import sample from './sample-reducer';
-import main from './main-reducer';
 import editor from './editor-reducer';
+import nav from './nav-reducer';
+import ideas from './ideas-reducer';
 
 const reducers = combineReducers({
-	main,
+	nav,
 	sample,
-	editor
+	editor,
+	ideas
 });
 
 export default reducers;

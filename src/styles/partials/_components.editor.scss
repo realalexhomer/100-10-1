@@ -1,0 +1,27 @@
+.editor {
+	width: 80%;
+	margin: 0px auto;
+	.toolbar {
+		width: 100%;
+		height: 40px;
+		.editor-heading {
+			font-weight: bold;
+			line-height: 40px;
+			width: 100%;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+		margin-bottom: 20px;
+	}
+
+	.textarea-wrapper {
+		width: 100%;
+	}
+
+	.textarea {
+		width: 100%;
+		resize: none;
+		height: $some-arbitrary-height;
+	}
+}
+

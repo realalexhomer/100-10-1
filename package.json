@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.4.8",
+    "inuit-starter-kit": "^0.2.9",
     "ng-redux": "^3.3.3",
     "normalize-scss": "^4.0.3",
     "ramda": "^0.19.1",
