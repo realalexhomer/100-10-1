@@ -6,9 +6,8 @@ export default class IdeaController {
 		$scope.$on('$destroy', disconnect);
 	}
 
-	onClickDelete(idx){ // not firing
-		console.log('here (ctrlr)')
-		this.deleteIdea(idx);
+	onClickDelete(id){ // not firing
+		this.deleteIdea(id);
 	}
 
 	onUpdate(state) {

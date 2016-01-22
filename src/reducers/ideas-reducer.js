@@ -3,26 +3,28 @@ import * as R from 'ramda';
 const INITIAL_STATE = [{
 	name: 'cameFrominit',
 	text: 'asdfadsf',
-	created: '1'
+	created: '1',
+	id: Math.floor(Math.random() * 1000000000)
 }];
 
 export default function editor(state = INITIAL_STATE, action) {
 	if (!action || !action.type) {
 		return state;
 	}
-		console.log('state is', state);
+	let payload = action.payload;
+
 	switch (action.type) {
 		case 'IDEA_POST':
-			console.log('idea posted... action is: ', action)
-			console.log('state is... :', state)
-			return R.append(action.payload)(state);
+			return R.append(payload)(state);
 		case 'IDEA_PUT':
 			// return R.merge(state)(action.payload);
+			return state
 		case 'IDEA_GET':
-			return;
+			return state;
 		case 'IDEA_DELETE':
-			console.log('deleting idea with idx', action.payload.idx)
-			return;
+			return R.filter((o) => {
+				return parseInt(o.id) !== parseInt(payload.id);
+			}, state);
 		default:
 			return state;
 	}

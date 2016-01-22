@@ -10,7 +10,6 @@ export default class EditorController {
 	}
 
 	onKeypress($ev) {
-		console.log('keypress ev', $ev);
 		switch ($ev.keyCode) {
 			case 13:
 				console.log('enter pressed!');
@@ -20,16 +19,15 @@ export default class EditorController {
 	}
 
 	onSubmit($ev) {
-		console.log('this is', this);
 		this.postIdea({
 			text: this.text,
 			title: 'default title',
-			created: 'tomorrow'
+			created: 'tomorrow',
+			id: Math.floor(Math.random() * 1000000000)
 		});
 	}
 
 	onUpdate(state) {
-		console.log('state in onupdate is', state)
 		return {
 			text: state.editor.text,
 			msg: state.editor.msg,

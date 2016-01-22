@@ -4,7 +4,8 @@ export function postIdea(idea) {
 		payload: {
 			name: 'alex',
 			created: idea.created,
-			text: idea.text
+			text: idea.text,
+			id: idea.id
 		}
 	}
 }
@@ -18,17 +19,16 @@ export function selectIdea(idx) {
 	}
 }
 
-export function deleteIdea(idx) {
-	console.log('here')
+export function deleteIdea(id) {
 	return {
 		type: 'IDEA_DELETE',
 		payload: {
-			idx: idx
+			id: id
 		}
 	}
 }
 
 
 export default {
-	postIdea, selectIdea
+	postIdea, selectIdea, deleteIdea
 }

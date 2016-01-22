@@ -12,4 +12,6 @@ const reducers = combineReducers({
 	ideas
 });
 
+console.log('reducers is', reducers)
+
 export default reducers;

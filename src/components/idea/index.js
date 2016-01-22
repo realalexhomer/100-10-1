@@ -14,7 +14,7 @@ export default angular
 			scope: {},
 			replace: true,
 			link: ($scope, $el, attrs) => {
-				$scope.idea = Object.assign({}, attrs);
+				$scope.idea = Object.assign($scope.idea, attrs);
 			}
 		};
 	})
