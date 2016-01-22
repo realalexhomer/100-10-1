@@ -1,6 +1,9 @@
-<div class="idea" ng-click="idea.onClickDelete(idea.id)">
+<div class="idea">
+	<div class="idea-delete-button" ng-click="idea.onClickDelete(idea.id)">
+		X
+	</div>
 	{{idea.name}}
-	{{idea.text}}
+	<p>{{idea.text}}</p>
 	{{idea.created}}
 	{{idea.id}}
 </div>
