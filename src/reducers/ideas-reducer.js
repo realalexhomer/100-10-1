@@ -1,10 +1,8 @@
 import * as R from 'ramda';
 
-const newLine = '&#13;&#10;';
-
 const INITIAL_STATE = [{
 	name: 'cameFrominit',
-	text: "hi",
+	text: "asfasdf",
 	created: '1',
 	id: Math.floor(Math.random() * 1000000000)
 }];
